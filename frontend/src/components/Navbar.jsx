@@ -21,7 +21,7 @@ export default function Navbar() {
                         <ShieldCheck size={15} className="text-white" />
                     </div>
                     <span className="font-bold text-gray-900 dark:text-gray-100 text-[15px] tracking-tight">
-                        SecurePDF<span className="text-indigo-600">Vault</span>
+                        SecureFiles<span className="text-indigo-600">Vault</span>
                     </span>
                 </Link>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
                         Admin
                     </Link>
                     <Link to="/upload" className="btn-primary py-2 px-4 text-xs">
-                        Upload PDF
+                        Upload File
                     </Link>
                 </div>
             </div>

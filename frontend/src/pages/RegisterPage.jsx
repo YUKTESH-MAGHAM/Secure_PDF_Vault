@@ -30,7 +30,7 @@ const RegisterPage = () => {
         setIsLoading(false);
 
         if (success) {
-            toast.success('Registration successful! Welcome to Secure PDF Vault.');
+            toast.success('Registration successful! Welcome to Secure Files Vault.');
             navigate('/upload');
         } else {
             console.error("AXIOS REGISTRATION ERROR DETAILS:", error);

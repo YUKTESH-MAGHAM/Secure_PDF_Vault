@@ -25,7 +25,7 @@ const features = [
 ]
 
 const steps = [
-    { step: 1, icon: Upload, title: 'Upload your File', desc: 'Drag & drop any PDF. Set a secret key and expiry window.' },
+    { step: 1, icon: Upload, title: 'Upload your File', desc: 'Drag & drop any File. Set a secret key and expiry window.' },
     { step: 2, icon: Key, title: 'Get your File ID', desc: 'System generates a short unique ID (e.g. PDF-KX72M9). Share it.' },
     { step: 3, icon: Download, title: 'Recipient accesses', desc: 'They enter the ID + your secret key to preview and download.' },
 ]

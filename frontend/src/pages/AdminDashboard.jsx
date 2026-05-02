@@ -106,7 +106,7 @@ export default function AdminDashboard() {
                 <div className="flex items-center justify-between mb-6">
                     <div>
                         <h1 className="section-title">All Files</h1>
-                        <p className="section-sub">Manage uploaded PDFs and their access credentials</p>
+                        <p className="section-sub">Manage uploaded Files and their access credentials</p>
                     </div>
                     <button onClick={fetchFiles} className="btn-secondary gap-2" disabled={loading}>
                         <RefreshCw size={13} className={loading ? 'animate-spin' : ''} /> Refresh

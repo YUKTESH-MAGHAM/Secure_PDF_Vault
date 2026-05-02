@@ -22,6 +22,7 @@ export default function AdminLogin() {
             const adminPassword = localStorage.getItem('admin_password') || DEFAULT_PASSWORD
             if (email.trim() === adminEmail && password === adminPassword) {
                 localStorage.setItem('admin_token', 'admin-authenticated')
+                localStorage.removeItem('token') // Clear any user session to avoid token collision
                 toast.success('Welcome back, Admin!')
                 navigate('/admin/dashboard')
             } else {

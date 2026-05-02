@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
             const { data } = await apiLogin(email, password);
             localStorage.setItem('token', data.token);
             localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.removeItem('admin_token'); // Clear any admin session to avoid token collision
             setUser(data.user);
             return { success: true };
         } catch (error) {
@@ -42,6 +43,7 @@ export const AuthProvider = ({ children }) => {
             const { data } = await apiRegister(email, password);
             localStorage.setItem('token', data.token);
             localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.removeItem('admin_token'); // Clear any admin session to avoid token collision
             setUser(data.user);
             return { success: true };
         } catch (error) {
@@ -55,6 +57,7 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        localStorage.removeItem('admin_token'); // Also clear admin token on logout
         setUser(null);
     };
 
